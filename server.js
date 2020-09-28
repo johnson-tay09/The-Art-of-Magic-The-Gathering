@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 //routs
-// app.get('/', renderHomePage);
+app.get('/', renderHomePage);
 // app.post('/search', collectData);
 // app.get('/searchform', renderSearchForm);
 app.get('/search', collectData);
@@ -55,9 +55,9 @@ function collectData(request, response) {
 		// response.render('pages/searches/show', { result: finalCardArray });
 	});
 }
-// function renderHomePage(request, response) {
-// 	response.status(200).send('/');
-// }
+function renderHomePage(request, response) {
+	response.status(200).render('/views/index.ejs');
+}
 //not found
 function notFoundHandler(req, res) {
 	res.status(404).send('not found!');
