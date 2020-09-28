@@ -26,9 +26,39 @@
           </div>
     </header>
         <main>
-            <h1>HELLO</h1>
-            
-          
+            <h1>Search for Card Name or Artist</h1>
+            <form action=""></form>
+            <div id="form">
+				<h4>Search by Card Name or Artist</h4>
+				<form action="/searches" method="post">
+					<div id="search">
+						<input
+							id="search"
+							type="text"
+							name="search"
+							placeholder="Enter a name or artist"
+							required
+						/>
+					</div>
+					<fieldset>
+						<div id="title">
+							<label for="name">
+								<span>Card Name</span>
+								<input type="radio" name="search" value="name" required />
+							</label>
+						</div>
+					</fieldset>
+					<fieldset>
+						<div id="artist">
+							<label for="artist">
+								<span>Artist</span>
+								<input type="radio" name="search" value="artist" required />
+							</label>
+						</div>
+					</fieldset>
+					<button type="submit">Search the Google Books API</button>
+				</form>
+			</div>
 
         </main>
         <footer>
