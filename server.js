@@ -23,9 +23,8 @@ app.use(cors());
 
 //routs
 app.get('/', renderHomePage);
+// app.post('/search', collectData);
 app.post('/search', collectData);
-// app.get('/searchform', renderSearchForm);
-app.get('/search', collectData);
 
 //callback function
 
@@ -47,6 +46,11 @@ function collectData(request, response) {
 		response.render('../views/pages/searches/show.ejs', {finalCardArray: finalCardArray });
 	});
 }
+
+function renderHomePage(request, response) {
+	response.status(200).render('/views/index.ejs');
+}
+//not found
 
 function notFoundHandler(req, res) {
 	res.status(404).send('not found!');

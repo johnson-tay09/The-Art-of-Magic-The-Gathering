@@ -12,6 +12,29 @@
 
     </header>
     <main>
+        <div class="card">
+            <ul>
+                <% finalCardArray.forEach(card => { %>
+                <section>
+                <li><h1><%= card.name %></li>
+                <li><img src="<%= card.image_url %>" /></li>
+                <li><h3><%= card.artist %></h3></li>
+
+                <form action="/favorites" method="post">
+                <fieldset id="create-form">  
+                    <%- include('../forms/show-form', {value:card}) %>
+                </fieldset>
+                <button type="submit">Add to Favorites</button>
+                  </form>
+
+                  <form  action="/searchArtist" method="get">
+                    <button type="submit">`See more from <%= card.artist %>`</button>
+                      </form>
+
+            </section>
+                <% }) %>
+            </ul> 
+        </div>
 
     </main>
     <footer>
