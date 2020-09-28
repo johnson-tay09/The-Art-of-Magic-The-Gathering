@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="./styles/reset.css" />
+		<link rel="stylesheet" href="./styles/base.css" />
+		<link rel="stylesheet" href="./styles/layout.css" />
+		<link rel="stylesheet" href="./styles/modules.css" />
+		<title>Card Favorites</title>
+		<link href="base.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header></header>
+		<main>
+			<h4>Saved Cooks</h4>
+			<ul>
+				<% savedCardArray.forEach(card => { %>
+				<section>
+					<li><img src="<%= card.image_url %>" alt="" /></li>
+					<li><h1><%= card.name %></h1></li>
+					<li><h3><%= card.artist %></h3></li>
+					<li><p><%= card.artist_store_url %></p></li>
+				</section>
+				<%})%>
+			</ul>
+		</main>
+	</body>
+</html>

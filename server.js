@@ -25,25 +25,41 @@ app.use(cors());
 app.get('/', renderHomePage);
 // app.post('/search', collectData);
 app.post('/search', collectData);
+app.get('/favorites', renderFavePage);
 
-//callback function
+//callback functions
+
+function renderFavePage(request, response) {
+	// go into the database
+	const sql = 'SELECT * FROM magic_table;';
+	client.query(sql).then((results) => {
+		// get all of my tasks
+		const allCards = results.rows;
+		// render them to the page
+		response
+			.status(200)
+			.render('pages/favorites.ejs', { savedCardArry: allCards });
+	});
+}
 
 function collectData(request, response) {
 	const searchQuery = request.body.search[0];
 	const searchType = request.body.search[1];
 	let url = 'https://api.magicthegathering.io/v1/cards?';
 	if (searchType === 'name') {
-		url += `+name:${searchQuery}`;
+		url += `name=${searchQuery}`;
 	}
 	if (searchType === 'artist') {
-		url += `+artist:${searchQuery}`;
+		url += `artist=${searchQuery}`;
 	}
 	superagent.get(url).then((data) => {
 		const cardArray = data.body.cards;
 		console.log(cardArray);
 		const finalCardArray = cardArray.map((value) => new Card(value));
 		console.log(finalCardArray);
-		response.render('../views/pages/searches/show.ejs', {finalCardArray: finalCardArray });
+		response.render('../views/pages/searches/show.ejs', {
+			finalCardArray: finalCardArray,
+		});
 	});
 }
 
@@ -60,12 +76,14 @@ function notFoundHandler(req, res) {
 function Card(obj) {
 	this.name = obj.name;
 	this.artist = obj.artist;
-	this.image_url = obj.imageUrl;
+	this.image_url = obj.imageUrl
+		? obj.imageUrl
+		: 'https://i.imgur.com/J5LVHEL.jpg';
 	this.artist_store_url = '';
 }
 
-function renderHomePage(req, res){
-	res.status(200).render('../views/index.ejs')
+function renderHomePage(req, res) {
+	res.status(200).render('../views/index.ejs');
 }
 
 app.use('*', notFoundHandler);
