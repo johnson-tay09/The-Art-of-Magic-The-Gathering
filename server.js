@@ -52,14 +52,13 @@ function collectData(request, response) {
 	if (searchType === 'artist') {
 		url += `artist=${searchQuery}`;
 	}
+	console.log(url);
 	superagent.get(url).then((data) => {
 		const cardArray = data.body.cards;
-		console.log(cardArray);
 		const finalCardArray = cardArray.map((value) => new Card(value));
-		console.log(finalCardArray);
-		response.render('../views/pages/searches/show.ejs', {
-			finalCardArray: finalCardArray,
-		});
+
+		response.render('../views/pages/searches/show.ejs', {finalCardArray: finalCardArray });
+
 	});
 }
 
