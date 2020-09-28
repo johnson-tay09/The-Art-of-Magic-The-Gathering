@@ -22,14 +22,54 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 //routs
-app.get('/', renderHomePage);
+// app.get('/', renderHomePage);
+// app.post('/search', collectData);
+// app.get('/searchform', renderSearchForm);
+app.get('/search', collectData);
 
+//callback function
+
+function collectData(request, response) {
+	// collect form information
+	// console.log(request.body);
+	// { search: [ 'Elizabeth Moon', 'artist' ] }
+	// { search: [ 'The magic of thinking big', 'name' ] }
+	const searchQuery = request.body.search[0];
+	const searchType = request.body.search[1];
+	let url = 'https://api.magicthegathering.io/v1/cards?name=tarmogoyf';
+	if (searchType === 'name') {
+		url += `+name:${searchQuery}`;
+	}
+	if (searchType === 'artist') {
+		url += `+artist:${searchQuery}`;
+	}
+
+	superagent.get(url).then((data) => {
+		//array of arrays
+		console.log(data.body);
+		const cardArray = data.body.cards;
+		// console.log(bookArray);
+		//a book is an object with key value pairs
+		const finalCardArray = cardArray.map((value) => new Card(value));
+		console.log(finalCardArray);
+		// response.render('pages/searches/show', { result: finalCardArray });
+	});
+}
+// function renderHomePage(request, response) {
+// 	response.status(200).send('/');
+// }
 //not found
 function notFoundHandler(req, res) {
 	res.status(404).send('not found!');
 }
 
-
+//card constructor
+function Card(obj) {
+	this.name = obj.name;
+	this.artist = obj.artist;
+	this.image_url = obj.imageUrl;
+	this.artist_store_url = '';
+}
 
 app.use('*', notFoundHandler);
 // start server
