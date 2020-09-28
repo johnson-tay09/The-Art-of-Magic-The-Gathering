@@ -62,6 +62,7 @@ function collectData(request, response) {
 function notFoundHandler(req, res) {
 	res.status(404).send('not found!');
 }
+
 //card constructor
 function Card(obj) {
 	this.name = obj.name;
@@ -69,6 +70,7 @@ function Card(obj) {
 	this.image_url = obj.imageUrl;
 	this.artist_store_url = '';
 }
+
 app.use('*', notFoundHandler);
 // start server
 function startServer() {
