@@ -26,9 +26,24 @@ app.get('/', renderHomePage);
 // app.post('/search', collectData);
 app.post('/search', collectData);
 app.get('/favorites', renderFavePage);
+app.post('/add', addCard);
 
 //callback functions
-
+function addCard(request, response) {
+	const { name, artist, image_url, artist_store_url } = request.body;
+	// put it in the database
+	const sql =
+		'INSERT INTO magic_table (name, artist, image_url, artist_store_url) VALUES ($1, $2, $3, $4);';
+	const safeValues = [name, artist, image_url, artist_store_url];
+	// console.log(safeValues);
+	client.query(sql, safeValues).then((results) => {
+		const id = results.rows;
+		// console.log('results from sql', id);
+		// redirect to the individual task when done
+		console.log(results);
+		response.redirect(`pages/favorites`);
+	});
+}
 function renderFavePage(request, response) {
 	// go into the database
 	const sql = 'SELECT * FROM magic_table;';
@@ -57,8 +72,9 @@ function collectData(request, response) {
 		const cardArray = data.body.cards;
 		const finalCardArray = cardArray.map((value) => new Card(value));
 
-		response.render('../views/pages/searches/show.ejs', {finalCardArray: finalCardArray });
-
+		response.render('../views/pages/searches/show.ejs', {
+			finalCardArray: finalCardArray,
+		});
 	});
 }
 

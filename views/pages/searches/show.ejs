@@ -20,16 +20,16 @@
                 <li><img src="<%= card.image_url %>" /></li>
                 <li><h3><%= card.artist %></h3></li>
 
-                <form action="/favorites" method="post">
+                <form action="/add" method="post">
                 <fieldset id="create-form">  
-                    <input class="details" type="text" name="name" value="<%= value.name %>" />
+                <input class="details" type="text" name="name" value="<%= card.name %>" />
 <input
 	class="details"
 	type="text"
 	name="image_url"
-	value="<%= value.image_url %>"
+	value="<%= card.image_url %>"
 />
-<input class="details" type="text" name="artist" value="<%= value.artist %>" />
+<input class="details" type="text" name="artist" value="<%= card.artist %>" />
 <input class="details" type="text" name="artist_store_url" value="" />
 
                 </fieldset>
