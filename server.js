@@ -29,6 +29,8 @@ function notFoundHandler(req, res) {
 	res.status(404).send('not found!');
 }
 
+
+
 app.use('*', notFoundHandler);
 // start server
 function startServer() {
