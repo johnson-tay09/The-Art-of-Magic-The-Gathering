@@ -33,16 +33,15 @@ function collectData(request, response) {
 	const searchType = request.body.search[1];
 	let url = 'https://api.magicthegathering.io/v1/cards?';
 	if (searchType === 'name') {
-		url += `+name:${searchQuery}`;
+		url += `name=${searchQuery}`;
 	}
 	if (searchType === 'artist') {
-		url += `+artist:${searchQuery}`;
+		url += `artist=${searchQuery}`;
 	}
+	console.log(url);
 	superagent.get(url).then((data) => {
 		const cardArray = data.body.cards;
-		console.log(cardArray);
 		const finalCardArray = cardArray.map((value) => new Card(value));
-		console.log(finalCardArray);
 		response.render('../views/pages/searches/show.ejs', {finalCardArray: finalCardArray });
 	});
 }
