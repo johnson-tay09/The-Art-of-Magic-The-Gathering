@@ -1,8 +1,13 @@
 body{
-    background-color: lightgrey;
+    background-color: black;
     
 }
 
 main{
     text-align: center;
+}
+
+img{
+    width: 265px;
+    height: 370px;
 }

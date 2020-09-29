@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/modules.css" />
+    <%- include('../partials/head.ejs') %>
     <title>Results Page</title>
 </head>
 <body>
     <header>
+        <div class="fixed-top">
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                    <h5 class="text-white h4">Magic Menu</h5>
 
+                    <a href="pages/searches/new.ejs"
+                        ><span class="text-white"><p>Favorite Cards</p></span></a
+                    >
+                    <a href="pages/searches/new.ejs"
+                        ><span class="text-white"><p>About Us</p></span></a
+                    >
+                </div>
+            </div>
+            <nav class="navbar navbar-dark bg-dark">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent"
+                    aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
     </header>
     <main>
         <div class="card">
