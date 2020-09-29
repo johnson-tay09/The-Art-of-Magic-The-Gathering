@@ -32,20 +32,17 @@ app.post('/searchArtist', seeMoreArtists);
 app.delete('/delete/:card_id', deleteOneCard);
 app.put('/update/:card_id', updateOneCard);
 
-
 //callback functions
 
-function updateOneCard (request, response) {
+function updateOneCard(request, response) {
 	const id = request.params.card_id;
 	const { artist_store_url } = request.body;
 	let sql = 'UPDATE magic_table SET artist_store_url=$1 WHERE id=$2;';
 	let safeValues = [artist_store_url, id];
-	client.query(sql, safeValues)
-	 .then(() => {
-	response.status(200).redirect('/favorites');
-   })
+	client.query(sql, safeValues).then(() => {
+		response.status(200).redirect('/favorites');
+	});
 }
-
 
 function deleteOneCard(request, response) {
 	const id = request.params.card_id;
@@ -61,8 +58,7 @@ function addCard(request, response) {
 	const sql =
 		'INSERT INTO magic_table (name, artist, image_url, artist_store_url) VALUES ($1, $2, $3, $4);';
 	const safeValues = [name, artist, image_url, artist_store_url];
-	client.query(sql, safeValues)
-	.then((results) => {
+	client.query(sql, safeValues).then((results) => {
 		response.status(200).redirect('/favorites');
 	});
 }
@@ -134,7 +130,7 @@ function Card(obj) {
 	this.artist = obj.artist;
 	this.image_url = obj.imageUrl
 		? obj.imageUrl
-		: 'https://i.imgur.com/J5LVHEL.jpg';
+		: 'https://lh3.googleusercontent.com/H6kqnK5eAxFWeSsrqsX0IMxmd9gvm3idDQuO9hK60qXTUGo6SoGYZdcmbmtFthtSG8XkYFJspXZiNxmtIyJg1TOMC-vl_enKWPz2R9dKg31kPRJcD3NJWQvB2Ss5hgF4vYrvTqTT6w=w2400';
 	this.artist_store_url = '';
 }
 
