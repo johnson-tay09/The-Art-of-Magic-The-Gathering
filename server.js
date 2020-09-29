@@ -31,8 +31,20 @@ app.post('/add', addCard);
 app.post('/searchArtist', seeMoreArtists);
 app.delete('/delete/:card_id', deleteOneCard);
 app.put('/update/:card_id', updateOneCard);
+app.get('/aboutus', renderAboutUs);
 
 //callback functions
+
+function renderAboutUs (request, response) {
+	try { 
+	response.status(200).render('/views/pages/about.ejs');
+	}
+
+	catch {
+	('error', (err) => console.log(err));
+
+	}
+}
 
 function updateOneCard(request, response) {
 	const id = request.params.card_id;
