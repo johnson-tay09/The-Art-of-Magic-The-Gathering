@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../css/modules.css" />
-    <title>Results Page</title>
+    <%- include('../partials/head.ejs') %>  
+    <title>Artist Page</title>
 </head>
 <body>
     <header>
@@ -13,8 +10,8 @@
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="bg-dark p-4">
                     <h5 class="text-white h4">Magic Menu</h5>
-                    <a href="/"><span class=“text-white”><p>Home</p></span></a>
-                    <a href="/aboutus"><span class=“text-white”><p>About Us</p></span></a>
+                    <a href="/"><span class="text-white"><p>Home</p></span></a>
+                    <a href="/aboutus"><span class="text-white"><p>About Us</p></span></a>
                  <a href="/favorites"><span class="text-white"><p>Favorite Cards</p></span></a>
                 </div>
             </div>
@@ -33,9 +30,11 @@
         </div>
     </header>
     <main>
-        <div class="card">
-            <section class="gallery">
-                <% finalCardArray.forEach(card => { %>
+        <h1>Artist Page</h1>
+        
+        <section class="gallery">
+            <% finalCardArray.forEach(card => { %>
+            <div class="card">
                 <h2><%= card.name %></h2>
                 <img src="<%= card.image_url %>" />
                 <h3><%= card.artist %></h3>
