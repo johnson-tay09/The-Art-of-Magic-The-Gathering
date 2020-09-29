@@ -34,12 +34,11 @@
     </header>
     <main>
         <div class="card">
-            <ul>
+            <section class="gallery">
                 <% finalCardArray.forEach(card => { %>
-                <section>
-                <li><h1><%= card.name %></li>
-                <li><img src="<%= card.image_url %>" /></li>
-                <li><h3><%= card.artist %></h3></li>
+                <h2><%= card.name %></h2>
+                <img src="<%= card.image_url %>" />
+                <h3><%= card.artist %></h3>
 
                 <form action="/add" method="post">
                 <fieldset id="create-form">  
@@ -58,10 +57,9 @@
 
 
 
-            </section>
-                <% }) %>
-            </ul> 
-        </div>
+</div>
+<% }) %>
+</section>
 
     </main>
     <footer>

@@ -90,7 +90,7 @@ function collectData(request, response) {
 	if (searchType === 'artist') {
 		url += `artist=${searchQuery}`;
 	}
-	// console.log(url);
+	
 	superagent.get(url).then((data) => {
 		const cardArray = data.body.cards;
 		const finalCardArray = cardArray.map((value) => new Card(value));
@@ -109,7 +109,7 @@ function renderHomePage(request, response) {
 function seeMoreArtists(req, res) {
 	const cardByArtist = req.body.artist;
 	let url = `https://api.magicthegathering.io/v1/cards?artist=${cardByArtist}`;
-	// console.log(cardByArtist);
+	
 
 	superagent.get(url).then((data) => {
 		let cardArray = data.body.cards;
@@ -130,7 +130,6 @@ function notFoundHandler(req, res) {
 
 //card constructor
 function Card(obj) {
-	console.log(obj);
 	this.name = obj.name;
 	this.artist = obj.artist;
 	this.image_url = obj.imageUrl
