@@ -28,11 +28,8 @@ app.get('/', renderHomePage);
 app.post('/search', collectData);
 app.get('/favorites', renderFavePage);
 app.post('/add', addCard);
-
 app.post('/searchArtist', seeMoreArtists);
-
 app.delete('/delete/:card_id', deleteOneCard);
-
 
 //callback functions
 function deleteOneCard(request, response) {
@@ -101,18 +98,17 @@ function seeMoreArtists(req, res) {
 	const cardByArtist = req.body.artist;
 	let url = `https://api.magicthegathering.io/v1/cards?artist=${cardByArtist}`;
 	console.log(cardByArtist);
-	
+
 	superagent.get(url).then((data) => {
 		let cardArray = data.body.cards;
-		cardArray = cardArray.filter(card => card.artist === cardByArtist);
+		cardArray = cardArray.filter((card) => card.artist === cardByArtist);
 		const finalCardArray = cardArray.map((value) => new Card(value));
 
 		res.render('../views/pages/searches/artist.ejs', {
 			finalCardArray: finalCardArray,
 		});
 	});
-
-} 
+}
 
 //not found
 
