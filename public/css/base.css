@@ -1,13 +1,27 @@
+
+
 body{
-    background-color: black;
+    background-color: lightgrey;
     
 }
 
 main{
+    width: 100%;
     text-align: center;
+   
 }
 
 img{
     width: 265px;
-    height: 370px;
+    height: 351px;
+    margin: auto;
+}
+
+li{
+    text-decoration: none;
+}
+
+button{
+    border-radius: 7px;
+    margin-bottom: 2px;
 }

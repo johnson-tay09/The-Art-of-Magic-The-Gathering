@@ -12,8 +12,12 @@
 					<div class="bg-dark p-4">
 						<h5 class="text-white h4">Magic Menu</h5>
 
-						<a href="pages/searches/new.ejs"><span class="text-white"><p>Favorite Cards</p></span></a>
-						<a href="pages/searches/new.ejs"><span class="text-white"><p>About Us</p></span></a>
+						<a href="/favorites"
+							><span class="text-white"><p>Favorite Cards</p></span></a
+						>
+						<a href="pages/searches/new.ejs"
+							><span class="text-white"><p>About Us</p></span></a
+						>
 					</div>
 				</div>
 				<nav class="navbar navbar-dark bg-dark">
@@ -32,6 +36,7 @@
 			</div>
 		</header>
 		<main>
+			
 			<h4>Saved Cards</h4>
 			<ul>
 				<% savedCardArry.forEach(card => { %>
