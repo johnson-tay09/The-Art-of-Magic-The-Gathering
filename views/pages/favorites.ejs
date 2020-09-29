@@ -44,7 +44,7 @@
 					<li><img src="<%= card.image_url %>" alt="" /></li>
 					<li><h1><%= card.name %></h1></li>
 					<li><h3><%= card.artist %></h3></li>
-					<li><p><%= card.artist_store_url %></p></li>
+					<li><a href="<%=card.artist_store_url %>"><%= card.artist_store_url %></a></li>
 
 					<form action="/searchArtist" method="post">
 						<input
@@ -59,6 +59,13 @@
 					<form action="/delete/<%= card.id %>?_method=DELETE" method="POST">
 						<button type="submit">Delete Book</button>
 					</form>
+
+					<form id="updateForm" action="/update/<%= card.id %>?_method=PUT" method="POST">
+						<div id="search">
+							<input id="search" type="text" name="artist_store_url" placeholder="Enter artist store url" required />
+							<button type="submit">Update store</button>
+						</div>
+					</form>	
 				</section>
 				<%})%>
 			</ul>
