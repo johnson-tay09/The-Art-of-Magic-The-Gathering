@@ -1,0 +1,17 @@
+.gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 380px 380px 380px 380px;
+    grid-auto-rows: 500px;
+    grid-gap: 10px;
+    justify-content: center;
+    margin-top: 80px;
+    opacity: 100%;
+    background-color: lightgrey;
+}
+
+.card {
+    background-color: lightgrey;
+}
+
+
