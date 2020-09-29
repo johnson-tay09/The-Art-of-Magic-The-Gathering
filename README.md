@@ -72,3 +72,27 @@ Integrate with google API to search for the artists store page and direct the us
 ## Entity Relationship Diagram
 
 ![Image of Relationship Diagram](https://lh3.googleusercontent.com/UlISeeG6KPP9XHt1uOWLV2lBUiPa1xKXpLOrirjikjLaBuLtFhe8RDvrCjK7BA0QG_JAI29qSFUI10lEYTD1PqhJ-gOFgYtYwFv_0qPwOVXIf_aGE6KqVBWoBA4S_xA3ZCyNuGj4Mg=w2400)
+
+## Version 1.0.0
+
+Basic scaffolding and dependencies.
+
+## Version 1.1.0
+
+Server connected and database connected.
+
+## Version 1.2.0
+
+Pages built with EJS where needed. CSS reset linked. Home route defined in server.js
+
+## Version 1.3.0
+
+Server.js routes and callback functions defined for index, search results, favorites.
+
+## Version 1.4.0
+
+Added routes and callbacks for 'see more from this artist' search function.
+
+## Version 1.5.0
+
+Added save and delete from favorites functions to server.js
