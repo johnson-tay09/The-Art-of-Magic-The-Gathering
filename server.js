@@ -28,7 +28,11 @@ app.get('/', renderHomePage);
 app.post('/search', collectData);
 app.get('/favorites', renderFavePage);
 app.post('/add', addCard);
+
+app.post('/searchArtist', seeMoreArtists);
+
 app.delete('/delete/:card_id', deleteOneCard);
+
 
 //callback functions
 function deleteOneCard(request, response) {
@@ -77,7 +81,7 @@ function collectData(request, response) {
 	if (searchType === 'artist') {
 		url += `artist=${searchQuery}`;
 	}
-	console.log(url);
+	// console.log(url);
 	superagent.get(url).then((data) => {
 		const cardArray = data.body.cards;
 		const finalCardArray = cardArray.map((value) => new Card(value));
@@ -91,6 +95,25 @@ function collectData(request, response) {
 function renderHomePage(request, response) {
 	response.status(200).render('/views/index.ejs');
 }
+
+// starting seeMoreArtists function
+function seeMoreArtists(req, res) {
+	const cardByArtist = req.body.artist;
+	let url = `https://api.magicthegathering.io/v1/cards?artist=${cardByArtist}`;
+	console.log(cardByArtist);
+	
+	superagent.get(url).then((data) => {
+		let cardArray = data.body.cards;
+		cardArray = cardArray.filter(card => card.artist === cardByArtist);
+		const finalCardArray = cardArray.map((value) => new Card(value));
+
+		res.render('../views/pages/searches/artist.ejs', {
+			finalCardArray: finalCardArray,
+		});
+	});
+
+} 
+
 //not found
 
 function notFoundHandler(req, res) {
