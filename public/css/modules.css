@@ -1,3 +1,23 @@
 #create-form {
 	display: none;
 }
+
+img{
+    width: 250px;
+    height: 350px;
+    margin: auto;
+}
+
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: underline;
+}

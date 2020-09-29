@@ -11,8 +11,8 @@
 				<div class="collapse" id="navbarToggleExternalContent">
 					<div class="bg-dark p-4">
 						<h5 class="text-white h4">Magic Menu</h5>
-						<a href="/"><span class=“text-white”><p>Home</p></span></a>
-						<a href="/aboutus"><span class=“text-white”><p>About Us</p></span></a>
+						<a href="/"><span class="text-white"><p>Home</p></span></a>
+						<a href=“pages/searches/new.ejs”><span class="text-white"><p>About Us</p></span></a>
 					 <a href="/favorites"><span class="text-white"><p>Favorite Cards</p></span></a>
 					</div>
 				</div>
@@ -33,14 +33,15 @@
 		</header>
 		<main>
 			
-			<h4>Saved Cards</h4>
-			<ul>
+			<h1>Favorite Cards</h1>
+			<section class="galleryFav">
+			
 				<% savedCardArry.forEach(card => { %>
-				<section>
-					<li><img src="<%= card.image_url %>" alt="" /></li>
-					<li><h1><%= card.name %></h1></li>
-					<li><h3><%= card.artist %></h3></li>
-					<li><a href="<%=card.artist_store_url %>"><%= card.artist_store_url %></a></li>
+					<div class="card">
+						<h2><%= card.name %></h2>
+					<img src="<%= card.image_url %>" alt="" />
+					<h3><%= card.artist %></h3>
+					<a href="<%=card.artist_store_url %>"><%= card.artist_store_url %></a>
 
 					<form action="/searchArtist" method="post">
 						<input
@@ -61,10 +62,11 @@
 							<input id="search" type="text" name="artist_store_url" placeholder="Enter artist store url" required />
 							<button type="submit">Update store</button>
 						</div>
-					</form>	
+					</form>
+				</div>	
+					<%})%>
 				</section>
-				<%})%>
-			</ul>
+					
 		</main>
 		<footer></footer>
 		<script
