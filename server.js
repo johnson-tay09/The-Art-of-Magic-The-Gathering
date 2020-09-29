@@ -30,14 +30,29 @@ app.get('/favorites', renderFavePage);
 app.post('/add', addCard);
 app.post('/searchArtist', seeMoreArtists);
 app.delete('/delete/:card_id', deleteOneCard);
+app.put('/update/:card_id', updateOneCard);
+
 
 //callback functions
+
+function updateOneCard (request, response) {
+	const id = request.params.card_id;
+	const { artist_store_url } = request.body;
+	let sql = 'UPDATE magic_table SET artist_store_url=$1 WHERE id=$2;';
+	let safeValues = [artist_store_url, id];
+	client.query(sql, safeValues)
+	 .then(() => {
+	response.status(200).redirect('/favorites');
+   })
+}
+
+
 function deleteOneCard(request, response) {
 	const id = request.params.card_id;
 	let sql = 'DELETE FROM magic_table WHERE id=$1;';
 	let safeValues = [id];
 	client.query(sql, safeValues);
-	response.status(200).redirect('../favorites');
+	response.status(200).redirect('/favorites');
 }
 
 function addCard(request, response) {
@@ -46,13 +61,9 @@ function addCard(request, response) {
 	const sql =
 		'INSERT INTO magic_table (name, artist, image_url, artist_store_url) VALUES ($1, $2, $3, $4);';
 	const safeValues = [name, artist, image_url, artist_store_url];
-	// console.log(safeValues);
-	client.query(sql, safeValues).then((results) => {
-		const id = results.rows;
-		// console.log('results from sql', id);
-		// redirect to the individual task when done
-		console.log(results.rows);
-		response.status(200).redirect(`favorites`);
+	client.query(sql, safeValues)
+	.then((results) => {
+		response.status(200).redirect('/favorites');
 	});
 }
 function renderFavePage(request, response) {
@@ -97,7 +108,7 @@ function renderHomePage(request, response) {
 function seeMoreArtists(req, res) {
 	const cardByArtist = req.body.artist;
 	let url = `https://api.magicthegathering.io/v1/cards?artist=${cardByArtist}`;
-	console.log(cardByArtist);
+	// console.log(cardByArtist);
 
 	superagent.get(url).then((data) => {
 		let cardArray = data.body.cards;
@@ -118,6 +129,7 @@ function notFoundHandler(req, res) {
 
 //card constructor
 function Card(obj) {
+	console.log(obj);
 	this.name = obj.name;
 	this.artist = obj.artist;
 	this.image_url = obj.imageUrl

@@ -46,24 +46,20 @@
                 <form action="/add" method="post">
                 <fieldset id="create-form">  
                 <input class="details" type="text" name="name" value="<%= card.name %>" />
-<input
-	class="details"
-	type="text"
-	name="image_url"
-	value="<%= card.image_url %>"
-/>
-<input class="details" type="text" name="artist_store_url" value="" />
+                <input class="details" type="text" name="image_url" value="<%= card.image_url %>" />
+                <input class="details" type="text" name="artist" value="<%= card.artist %>" />
+                <input class="details" type="text" name="artist_store_url" value="" />
 
-</fieldset>
-<button type="submit">Add to Favorites</button>
-</form>
+                </fieldset>
+                <button type="submit">Add to Favorites</button>
+                </form>
 
-<form  action="/searchArtist" method="post">
-    <input hidden class="details" type="text" name="artist" value= "<%= card.artist %>" />
-                    <button type="submit">See more from <%= card.artist %></button>
-                      </form>
+                <form  action="/searchArtist" method="post">
+                <input hidden class="details" type="text" name="artist" value= "<%= card.artist %>" />
+                <button type="submit">See more from <%= card.artist %></button>
+                </form>
 
-            </section>
+                </section>
                 <% }) %>
             </ul> 
         </div>
