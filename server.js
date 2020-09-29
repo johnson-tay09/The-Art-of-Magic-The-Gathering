@@ -36,14 +36,7 @@ app.get('/aboutus', renderAboutUs);
 //callback functions
 
 function renderAboutUs (request, response) {
-	try { 
-	response.status(200).render('/views/pages/about.ejs');
-	}
-
-	catch {
-	('error', (err) => console.log(err));
-
-	}
+response.status(200).render('./pages/about.ejs');
 }
 
 function updateOneCard(request, response) {
