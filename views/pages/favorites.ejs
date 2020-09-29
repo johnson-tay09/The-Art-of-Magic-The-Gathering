@@ -20,7 +20,14 @@
 					<li><h3><%= card.artist %></h3></li>
 					<li><p><%= card.artist_store_url %></p></li>
 
-					<form action="/searchArtist" method="get">
+					<form action="/searchArtist" method="post">
+						<input
+							hidden
+							class="details"
+							type="text"
+							name="artist"
+							value="<%= card.artist %>"
+						/>
 						<button type="submit">See more from <%= card.artist %></button>
 					</form>
 					<form action="/delete/<%= card.id %>?_method=DELETE" method="POST">
