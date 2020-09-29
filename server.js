@@ -7,6 +7,7 @@ const app = express();
 const pg = require('pg');
 const superagent = require('superagent');
 const cors = require('cors');
+const methodOverride = require('method-override');
 
 const PORT = process.env.PORT || 3000;
 const client = new pg.Client(process.env.DATABASE_URL);
@@ -17,18 +18,31 @@ client.on('error', (err) => console.log(err));
 app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride('_method'));
 // global variables
 
 app.use(cors());
 
 //routs
 app.get('/', renderHomePage);
-// app.post('/search', collectData);
 app.post('/search', collectData);
 app.get('/favorites', renderFavePage);
 app.post('/add', addCard);
+
 app.post('/searchArtist', seeMoreArtists);
+
+app.delete('/delete/:card_id', deleteOneCard);
+
+
 //callback functions
+function deleteOneCard(request, response) {
+	const id = request.params.card_id;
+	let sql = 'DELETE FROM magic_table WHERE id=$1;';
+	let safeValues = [id];
+	client.query(sql, safeValues);
+	response.status(200).redirect('../favorites');
+}
+
 function addCard(request, response) {
 	const { name, artist, image_url, artist_store_url } = request.body;
 	// put it in the database
@@ -40,20 +54,20 @@ function addCard(request, response) {
 		const id = results.rows;
 		// console.log('results from sql', id);
 		// redirect to the individual task when done
-		console.log(results);
-		response.redirect(`pages/favorites`);
+		console.log(results.rows);
+		response.status(200).redirect(`favorites`);
 	});
 }
 function renderFavePage(request, response) {
 	// go into the database
 	const sql = 'SELECT * FROM magic_table;';
 	client.query(sql).then((results) => {
-		// get all of my tasks
+		// get all of my cards
 		const allCards = results.rows;
 		// render them to the page
 		response
 			.status(200)
-			.render('pages/favorites.ejs', { savedCardArry: allCards });
+			.render('./pages/favorites', { savedCardArry: allCards });
 	});
 }
 
