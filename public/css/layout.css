@@ -125,10 +125,12 @@ body {
 		background-color: rgba(255, 0, 0, 0);
 		margin-top: 20px;
 	}
-	.footer {
-		position: inline-block;
-    text-align: center;
+	footer {
+		position: inline;
+        text-align: center;
 		color: black;
 		border: 1px solid black;
+		bottom: 0;
+		width: 100%;
     }
 }
