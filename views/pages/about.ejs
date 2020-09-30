@@ -34,6 +34,38 @@
     </div>
   </header>
   <main>
+    <h1>About Us</h1>
+
+      <section class="gallery-about-us">
+    <div class="scene scene--card">
+      <div class="card" id="card-one">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back">front</div>
+      </div>
+    </div>
+
+    <div class="scene scene--card">
+      <div class="card" id="card-two">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back">front</div>
+      </div>
+    </div>
+
+    <div class="scene scene--card">
+      <div class="card" id="card-three">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back">front</div>
+      </div>
+    </div>
+
+    <div class="scene scene--card">
+      <div class="card" id="card-four">
+        <div class="card__face card__face--front"></div>
+        <div class="card__face card__face--back">front</div>
+      </div>
+    </div>
+  </section>
+
     <section id="XXXX">
       <section class="bio">
         <h2>Taylor</h2>
@@ -80,6 +112,24 @@
       <button onclick="window.location.href='../index.html'">HOME</button>
     </footer>
   </main>
+  <script>
+    var cardOne = document.getElementById('card-one');
+cardOne.addEventListener( 'click', function() {
+  cardOne.classList.toggle('is-flipped');
+});
+var cardTwo = document.getElementById('card-two');
+cardTwo.addEventListener( 'click', function() {
+  cardTwo.classList.toggle('is-flipped');
+});
+var cardThree = document.getElementById('card-three');
+cardThree.addEventListener( 'click', function() {
+  cardThree.classList.toggle('is-flipped');
+});
+var cardFour = document.getElementById('card-four');
+cardFour.addEventListener( 'click', function() {
+  cardFour.classList.toggle('is-flipped');
+});
+  </script>
   <script
   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
