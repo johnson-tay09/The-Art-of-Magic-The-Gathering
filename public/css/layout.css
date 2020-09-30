@@ -1,82 +1,85 @@
 header {
-    padding-bottom: 300px;
+	padding-bottom: 300px;
+}
+html {
+	height: 100%;
 }
 
+body {
+	background-attachment: fixed;
+	/* background-position: static; */
+	background-repeat: no-repeat;
+	background-image: linear-gradient(to bottom right, #7d98a1, #eef1ef);
+	height: 100%;
+}
 .gallery {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 400px;
-    grid-auto-rows: 600px;
-    grid-gap: 10px;
-    justify-content: center;
-    margin-top: 80px;
-    opacity: 100%;
-    background-color: #EEF1EF;
-    padding: 10px;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 400px;
+	grid-auto-rows: 600px;
+	grid-gap: 10px;
+	justify-content: center;
+	margin-top: 80px;
+	opacity: 100%;
+	padding: 10px;
 }
 
 .galleryFav {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 400px;
-    grid-auto-rows: 600px;
-    grid-gap: 10px;
-    justify-content: center;
-    margin-top: 80px;
-    
-    opacity: 100%;
-    background-color: #EEF1EF;
-    
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 400px;
+	grid-auto-rows: 600px;
+	grid-gap: 10px;
+	justify-content: center;
+	margin-top: 80px;
+	opacity: 100%;
 }
 
 .card {
-    background-color: #A9B4C2;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 2px solid #5E6572;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-color: rgba(255, 0, 0, 0);
+	background-color: rgba(255, 0, 0, 0);
 }
-
-
-
-
 
 @media only screen and (min-width: 1000px) {
+	body {
+		background-image: linear-gradient(to bottom right, #7d98a1, #eef1ef);
+		height: 100%;
+	}
+	header {
+		padding-bottom: 300px;
+	}
 
+	.gallery {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 400px 400px 400px 400px;
+		grid-auto-rows: 600px;
+		grid-gap: 10px;
+		justify-content: center;
+		margin-top: 80px;
+		opacity: 100%;
+	}
 
-header{
-    padding-bottom: 300px;
-}
+	.galleryFav {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 400px 400px 400px 400px;
+		grid-auto-rows: 600px;
+		grid-gap: 10px;
+		justify-content: center;
+		margin-top: 80px;
+		opacity: 100%;
+	}
 
-.gallery {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 400px 400px 400px 400px;
-    grid-auto-rows: 500px;
-    grid-gap: 10px;
-    justify-content: center;
-    margin-top: 80px;
-    opacity: 100%;
-    background-color: lightgrey;
-}
-
-.galleryFav {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 400px 400px 400px 400px;
-    grid-auto-rows: 600px;
-    grid-gap: 10px;
-    justify-content: center;
-    margin-top: 80px;
-    
-    opacity: 100%;
-    background-color: lightgrey;
-    
-}
-
-.card {
-    background-color: lightgrey;
-    margin-top: 20px;
-}
-
-
+	.card {
+		border-color: rgba(255, 0, 0, 0);
+		background-color: rgba(255, 0, 0, 0);
+		margin-top: 20px;
+	}
 }
