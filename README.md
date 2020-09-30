@@ -96,3 +96,7 @@ Added routes and callbacks for 'see more from this artist' search function.
 ## Version 1.5.0
 
 Added save and delete from favorites functions to server.js
+
+## Version 1.6.0
+
+Added advanced styles. Drop shadows. Dynamic buttons.
