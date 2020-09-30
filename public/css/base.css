@@ -1,5 +1,5 @@
 body {
-    background-color: lightgrey;
+    background-color: #EEF1EF;
     
 }
 
@@ -11,9 +11,4 @@ main{
 
 li{
     text-decoration: none;
-}
-
-button{
-    border-radius: 7px;
-    margin-bottom: 2px;
 }

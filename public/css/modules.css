@@ -21,3 +21,16 @@ a:hover {
 a:active {
   text-decoration: underline;
 }
+
+button{
+  border-radius: 7px;
+  margin-bottom: 2px;
+  background-color: #7D98A1;
+  color: #EEF1EF;
+}
+
+h1, h2, h3 {
+  color: black;
+  font-family: 'Vollkorn', serif;
+  margin: 10px;
+}
