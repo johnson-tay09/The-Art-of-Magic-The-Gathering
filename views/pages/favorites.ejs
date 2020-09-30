@@ -41,8 +41,10 @@
 						<h2><%= card.name %></h2>
 					<img src="<%= card.image_url %>" alt="" />
 					<h3><%= card.artist %></h3>
-					<a href="<%=card.artist_store_url %>"><%= card.artist_store_url %></a>
-
+					<a href="<%=card.artist_store_url %>">Visit Artist Store</a>
+					<form action="/delete/<%= card.id %>?_method=DELETE" method="POST">
+						<button type="submit">Delete Book</button>
+					</form>
 					<form action="/searchArtist" method="post">
 						<input
 							hidden
@@ -53,9 +55,7 @@
 						/>
 						<button type="submit">See more from <%= card.artist %></button>
 					</form>
-					<form action="/delete/<%= card.id %>?_method=DELETE" method="POST">
-						<button type="submit">Delete Book</button>
-					</form>
+					
 
 					<form id="updateForm" action="/update/<%= card.id %>?_method=PUT" method="POST">
 						<div id="search">
