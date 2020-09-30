@@ -6,6 +6,8 @@ img {
 	width: 250px;
 	height: 350px;
 	margin: 10px auto 10px auto;
+	filter: drop-shadow(10px 10px 4px #636363);
+	border-radius: 17px;
 }
 
 a:link {
@@ -73,7 +75,6 @@ button:hover {
 	font-weight: bold;
 	font-size: 40px;
 	backface-visibility: hidden;
-	
 }
 
 .card__face--front {
@@ -98,6 +99,7 @@ h3 {
 	color: #045bb8;
 }
 h1 {
+	filter: drop-shadow(7px 7px 4px #636363);
 	font-family: 'Vollkorn', serif;
 	margin: 10px;
 	font-size: 6em;
@@ -114,7 +116,7 @@ h1 {
 a {
 	padding-right: 14px;
 }
-p:hover{
+p:hover {
 	color: #045bb8;
 }
 a:link,
