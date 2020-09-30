@@ -6,12 +6,13 @@ header {
     width: 100%;
     display: grid;
     grid-template-columns: 400px;
-    grid-auto-rows: 500px;
+    grid-auto-rows: 600px;
     grid-gap: 10px;
     justify-content: center;
     margin-top: 80px;
     opacity: 100%;
-    background-color: lightgrey;
+    background-color: #EEF1EF;
+    padding: 10px;
 }
 
 .galleryFav {
@@ -24,13 +25,15 @@ header {
     margin-top: 80px;
     
     opacity: 100%;
-    background-color: lightgrey;
+    background-color: #EEF1EF;
     
 }
 
 .card {
-    background-color: lightgrey;
+    background-color: #A9B4C2;
     margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #5E6572;
 }
 
 
