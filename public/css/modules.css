@@ -89,7 +89,6 @@ h2,
 h3 {
 	color: #1c2321;
 	font-family: 'Vollkorn', serif;
-	/* margin: 10px; */
 }
 
 h3 {
@@ -113,7 +112,6 @@ h1 {
 a:link,
 a:visited {
 	color: white;
-	padding: 14px 10px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
