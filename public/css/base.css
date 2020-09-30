@@ -1,14 +1,13 @@
 body {
-    background-color: #EEF1EF;
-    
+	background-image: linear-gradient(to bottom right, #7d98a1, #eef1ef);
+	height: 2000px;
 }
 
-main{
-    width: 100%;
-    text-align: center;
-   
+main {
+	width: 100%;
+	text-align: center;
 }
 
-li{
-    text-decoration: none;
+li {
+	text-decoration: none;
 }

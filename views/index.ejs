@@ -10,9 +10,15 @@
 				<div class="collapse" id="navbarToggleExternalContent">
 					<div class="bg-dark p-4">
 						<h5 class="text-white h4">Magic Menu</h5>
-						<a href="/"><span class="text-white"><p>Home</p></span></a>
-			     	<a href="/aboutus"><span class="text-white"><p>About Us</p></span></a>
-						<a href="/favorites"><span class="text-white"><p>Favorite Cards</p></span></a>
+						<a href="/"
+							><span class="text-white"><p>Home</p></span></a
+						>
+						<a href="/aboutus"
+							><span class="text-white"><p>About Us</p></span></a
+						>
+						<a href="/favorites"
+							><span class="text-white"><p>Favorite Cards</p></span></a
+						>
 					</div>
 				</div>
 				<nav class="navbar navbar-dark bg-dark">
@@ -32,6 +38,7 @@
 		</header>
 		<main>
 			<h1>The Art of Magic the Gathering</h1>
+
 			<form action=""></form>
 			<div id="form">
 				<h4>Search by Card Name or Artist</h4>
@@ -49,7 +56,13 @@
 						<div id="title">
 							<label for="name">
 								<span>Card Name</span>
-								<input type="radio" name="search" value="name" required />
+								<input
+									class="radio"
+									type="radio"
+									name="search"
+									value="name"
+									required
+								/>
 							</label>
 						</div>
 					</fieldset>
@@ -57,15 +70,49 @@
 						<div id="artist">
 							<label for="artist">
 								<span>Artist</span>
-								<input type="radio" name="search" value="artist" required />
+
+								<input
+									id="input1"
+									type="radio"
+									name="search"
+									value="artist"
+									required
+								/>
 							</label>
 						</div>
 					</fieldset>
 					<button type="submit">Search the MTG API</button>
 				</form>
 			</div>
+			<img
+				class="homeimg"
+				src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=195297&amp;type=card"
+				alt=""
+			/>
+			<img
+				class="homeimg"
+				src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=209&amp;type=card"
+				alt=""
+			/>
+			<img
+				class="homeimg"
+				src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=298&amp;type=card"
+				alt=""
+			/>
+			<img
+				class="homeimg"
+				src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=489948&amp;type=card"
+				alt=""
+			/>
+			<img
+				class="homeimg"
+				src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=437&amp;type=card"
+				alt=""
+			/>
 		</main>
-		<footer></footer>
+		<footer>
+			<p>Authors: Czarl the cool guy.</p>
+		</footer>
 		<script
 			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
