@@ -32,8 +32,12 @@ app.post('/searchArtist', seeMoreArtists);
 app.delete('/delete/:card_id', deleteOneCard);
 app.put('/update/:card_id', updateOneCard);
 app.get('/aboutus', renderAboutUs);
+app.get('/carderror', handleError);
 
 //callback functions
+function handleError (request, response) {
+  response.status(404).render('./pages/error.ejs');
+} 
 
 function renderAboutUs (request, response) {
 response.status(200).render('./pages/about.ejs');
@@ -91,14 +95,20 @@ function collectData(request, response) {
 		url += `artist=${searchQuery}`;
 	}
 	
-	superagent.get(url).then((data) => {
+	superagent.get(url)
+     .then((data) => {
+			// response.send(data.body);
 		const cardArray = data.body.cards;
+		if(cardArray.length === 0) {
+			response.status(404).redirect('/carderror');
+		} else {
 		const finalCardArray = cardArray.map((value) => new Card(value));
-
-		response.render('../views/pages/searches/show.ejs', {
-			finalCardArray: finalCardArray,
-		});
-	});
+		response.render('../views/pages/searches/show.ejs', { finalCardArray: finalCardArray,});
+			} 
+		})
+		.catch(() => {
+		response.status(404).redirect('/carderror');
+		})
 }
 
 function renderHomePage(request, response) {
