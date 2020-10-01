@@ -66,6 +66,32 @@ input {
     color: #fff;
   }
 
+footer {
+		
+    text-align: center;
+    color: black;
+    
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    background-color: #3a4149a4;
+    margin-top: 100px;
+    padding-top: 10px;
+}
+
+#footer {
+    position: absolute;
+    text-align: center;
+    color: black;
+
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    background-color: #3a4149a4;
+    /* line-height: 50px; */
+    padding-top: 10px;
+}  
+
 @media only screen and (min-width: 1000px) {
 	body {
 		background-image: linear-gradient(to bottom right, #7d98a1, #eef1ef);
