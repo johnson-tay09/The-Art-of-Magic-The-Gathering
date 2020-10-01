@@ -126,11 +126,28 @@ body {
 		margin-top: 20px;
 	}
 	footer {
-		position: inline;
+		
         text-align: center;
 		color: black;
 		border: 1px solid black;
-		bottom: 0;
+		height: 50px;
 		width: 100%;
+		bottom: 0;
+		background-color: #3a4149a4;
+		/* line-height: 50px; */
+		padding-top: 10px;
+	}
+	
+	#footer {
+		position: absolute;
+        text-align: center;
+		color: black;
+		border: 1px solid black;
+		height: 50px;
+		width: 100%;
+		bottom: 0;
+		background-color: #3a4149a4;
+		/* line-height: 50px; */
+		padding-top: 10px;
     }
 }
