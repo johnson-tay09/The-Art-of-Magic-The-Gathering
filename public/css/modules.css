@@ -29,14 +29,16 @@ button {
 	background-color: #7d98a1;
 	color: #eef1ef;
 	border: none;
-	padding: 4px;
+	padding: 12px 17px;
 	text-align: center;
 	text-decoration: none;
-	font-size: 16px;
+  font-size: 16px;
+  Transition: 350ms all;
 }
 button:hover {
 	background-color: #045bb8;
-	color: white;
+  color: white;
+  
 }
 
 /* CARD FLIP */
