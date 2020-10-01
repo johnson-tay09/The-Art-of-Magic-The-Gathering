@@ -43,7 +43,7 @@
 					<h3><%= card.artist %></h3>
 					<a class="store" href="<%=card.artist_store_url %>">Visit Artist Store</a>
 					<form action="/delete/<%= card.id %>?_method=DELETE" method="POST">
-						<button type="submit">Delete Book</button>
+						<button type="submit">Delete Card</button>
 					</form>
 					<form action="/searchArtist" method="post">
 						<input
@@ -68,7 +68,7 @@
 				</section>
 					
 		</main>
-		<footer id="footer">
+		<footer>
 			<%- include('../pages/partials/footer.ejs') %>
 		</footer>
 		<script
