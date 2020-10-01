@@ -35,11 +35,96 @@
   </header>
   <main>
       <h1>WELCOME TO ERROR LAND</h1>
-      <h2>Sorry, this card doesn't exist</h2>
+      <h2>Sorry, this card does not exist</h2>
+      <h2>and neither do any of these.</h2>
+      <section class="gallery">
+        <div class="scene scene--card">
+          <div class="card" id="card-five">
+            <div class="card__face card__face--front"></div>
+            <div class="card__face card__face--back-five"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-six">
+            <div class="card__face card__face--front"></div>
+            <div class="card__face card__face--back-six"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-seven">
+            <div class="card__face card__face--front"></div>
+            <div class="card__face card__face--back-seven"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-eight">
+            <div class="card__face card__face--front"></div>
+            <div class="card__face card__face--back-eight"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-nine">
+            <div class="card__face card__face--front"></div>
+            <div class="card__face card__face--back-nine"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-ten">
+            <div class="card__face card__face--front"></div>
+            <div class="card__face card__face--back-ten"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-eleven">
+            <div class="card__face card__face--front"></div>
+            <div class="card__face card__face--back-eleven"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-twelve">
+            <div class="card__face card__face--front"></div>
+            <div class="card__face card__face--back-twelve"></div>
+          </div>
+        </div>
+      </section>
   </main>
-  <footer id="footer">
+  <footer>
     <%- include('../pages/partials/footer.ejs') %>
 </footer>
+<script>
+  var cardFive = document.getElementById('card-five');
+cardFive.addEventListener( 'click', function() {
+cardFive.classList.toggle('is-flipped');
+});
+var cardSix = document.getElementById('card-six');
+cardSix.addEventListener( 'click', function() {
+cardSix.classList.toggle('is-flipped');
+});
+var cardSeven = document.getElementById('card-seven');
+cardSeven.addEventListener( 'click', function() {
+cardSeven.classList.toggle('is-flipped');
+});
+var cardEight = document.getElementById('card-eight');
+cardEight.addEventListener( 'click', function() {
+cardEight.classList.toggle('is-flipped');
+});
+var cardNine = document.getElementById('card-nine');
+cardNine.addEventListener( 'click', function() {
+cardNine.classList.toggle('is-flipped');
+});
+var cardTen = document.getElementById('card-ten');
+cardTen.addEventListener( 'click', function() {
+cardTen.classList.toggle('is-flipped');
+});
+var cardEleven = document.getElementById('card-eleven');
+cardEleven.addEventListener( 'click', function() {
+cardEleven.classList.toggle('is-flipped');
+});
+var cardTwelve = document.getElementById('card-twelve');
+cardTwelve.addEventListener( 'click', function() {
+cardTwelve.classList.toggle('is-flipped');
+});
+</script>
   <script
   src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
