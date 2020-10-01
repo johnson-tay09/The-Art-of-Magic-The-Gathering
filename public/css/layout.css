@@ -129,12 +129,12 @@ body {
 		
         text-align: center;
 		color: black;
-		border: 1px solid black;
+		
 		height: 50px;
 		width: 100%;
 		bottom: 0;
 		background-color: #3a4149a4;
-		/* line-height: 50px; */
+		margin-top: 100px;
 		padding-top: 10px;
 	}
 	
@@ -142,7 +142,7 @@ body {
 		position: absolute;
         text-align: center;
 		color: black;
-		border: 1px solid black;
+	
 		height: 50px;
 		width: 100%;
 		bottom: 0;

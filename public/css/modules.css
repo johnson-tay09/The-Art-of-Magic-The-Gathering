@@ -33,7 +33,6 @@ button {
 	text-align: center;
 	text-decoration: none;
 	font-size: 16px;
-	border: 1px solid white;
 }
 button:hover {
 	background-color: #045bb8;
@@ -157,13 +156,6 @@ button:hover {
 
 
 
-
-
-<img src="" alt="lena">
-<img src="" alt="sara-s">
-<img src="" alt="lee">
-<img src="" alt="sara-r">
-
 h2,
 h3 {
 	color: #1c2321;
@@ -187,6 +179,7 @@ h1 {
 .homeimg {
 	margin-left: 5px;
 	margin-bottom: 5px;
+	padding-right: 10px;
 }
 a {
 	padding-right: 14px;
