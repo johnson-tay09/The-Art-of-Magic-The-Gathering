@@ -83,8 +83,26 @@ button:hover {
 	filter: drop-shadow(10px 10px 4px #636363);
 }
 
-.card__face--back {
-	background-color: lightsalmon;
+.card__face--back-one {
+	background-image: url('https://lh3.googleusercontent.com/-Hck8dFXqkjiF9BGLXslL_2XQry74_nHxkNeL8c0O2-bhhfIv6C1QXEA82EfYsncG6slHU93OIul4ZFsD_jL2PHLgatWQzX8torswHNXZA6MbqTSNC0zxWfA3ZIrrPUrVo1jJQ_Esg=w250');
+	transform: rotateY(180deg);
+	filter: drop-shadow(20px 20px 4px #636363);
+}
+
+.card__face--back-two {
+	background-image: url('https://lh3.googleusercontent.com/90Io-CRCD3YdOciFPNG1MH9Iw0hzS9H9KSiMr03IFgHgcGAgR_7j5cBy1aksC1JCeoyypQ9xFfh48mV7YGiK_lpVLE1xIAmWhluAjE4Acmu1aOXXEm-hOZE3Yl5YHPAu9qjyv0qQhA=w250');
+	transform: rotateY(180deg);
+	filter: drop-shadow(20px 20px 4px #636363);
+}
+
+.card__face--back-three {
+	background-image: url('https://lh3.googleusercontent.com/-EsQ9ELMpIyOGyKD6Sla-o1Sl3fHL3rRk7UQii8u7SYHzvVLL5geXl14giIlxxuX-fyTB0EtT4dMdu5ByGHvvA_dqeCABCKEHbAvVkR0daWntsCE6USgtD7ZbZgulOkXZskHC_CXGw=w250');
+	transform: rotateY(180deg);
+	filter: drop-shadow(20px 20px 4px #636363);
+}
+
+.card__face--back-four {
+	background-image: url('https://lh3.googleusercontent.com/m5WfCxVGdLnxVu-qZgNKDLtvMIluunPKpJdqu-2rMG_okIWaMJMSqP06-pZV2Z8BADV9PSO_F-rjhPc2OB8f9H5ehBtTNRJk-GCDxqJ4MFFCQQxSXtkT0Tw4jFqhSdtVdaT3d4tblA=w250');
 	transform: rotateY(180deg);
 	filter: drop-shadow(20px 20px 4px #636363);
 }
@@ -133,4 +151,19 @@ a:active {
 }
 a.store {
 	padding: 0;
+}
+
+.bio-container{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.bio{
+	width: 50%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.bio-name{
+	font-size: 3em;
 }

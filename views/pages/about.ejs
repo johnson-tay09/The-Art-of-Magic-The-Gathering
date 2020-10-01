@@ -40,36 +40,36 @@
     <div class="scene scene--card">
       <div class="card" id="card-one">
         <div class="card__face card__face--front"></div>
-        <div class="card__face card__face--back">front</div>
+        <div class="card__face card__face--back-one"></div>
       </div>
     </div>
 
     <div class="scene scene--card">
       <div class="card" id="card-two">
         <div class="card__face card__face--front"></div>
-        <div class="card__face card__face--back">front</div>
+        <div class="card__face card__face--back-two"></div>
       </div>
     </div>
 
     <div class="scene scene--card">
       <div class="card" id="card-three">
         <div class="card__face card__face--front"></div>
-        <div class="card__face card__face--back">front</div>
+        <div class="card__face card__face--back-three"></div>
       </div>
     </div>
 
     <div class="scene scene--card">
       <div class="card" id="card-four">
         <div class="card__face card__face--front"></div>
-        <div class="card__face card__face--back">front</div>
+        <div class="card__face card__face--back-four"></div>
       </div>
     </div>
   </section>
 
-    <section id="XXXX">
+    <section id="bio-container">
       <section class="bio">
-        <h2>Taylor</h2>
-        <div class="photo"><img src="../img/XXX.jpg" alt="Taylor"></div>
+        <h2 class="bio-name">Taylor</h2>
+       
         <p>I am a problem solver with a knack for technology. Before I
           entered the world of Software Development I was a Manufacturing
           Engineer. I loved setting up new machines and learning their
@@ -86,32 +86,30 @@
         </p>
       </section>
       <section class="bio">
-        <h2>Czarl</h2>
-        <div class="photo"><img src="../img/XXX.jpg" alt="Czarl"></div>
+        <h2 class="bio-name">Czarl</h2>
+        
         <p>Czarl Jalos is a Software Engineer Along with his 8 years of Military service. He led a team and managed in fast paced and high stress environments. He ensured that we completed our job efficiently to support the flight operation and allow them to carry out missions. Since exiting the Navy four months ago, He studied Software Engineering which he’ll complete in December. What he love the most about working in this industry is that he get to be part of starting and developing something innovative and continuing learning. Also, he find the career lifecycle absolutely amazing and would like to share his ability to impact others and develop his developing skill. 
         </p>
       </section>
       <section class="bio">
-        <h2>Michael</h2>
-        <div class="photo"><img src="../img/XXX.jpg" alt="Michael"></div>
-        <p>Michael is a high ranked software developer and a well renowned voice actor in all 50 states. He holds two
-          gold medals in dad of the year award. When not being compared to Michael Jordan, Elon Musk and Oprah Winfrey,
-          you can find him jogging, paddle-boarding, canoeing, hiking and of course coding.</p>
+        <h2 class="bio-name">Michael</h2>
+        
+        <p>Michael is professional Software Developer experienced with working in fast-paced environments that demand strong professional, technical and organizational skills. Extremely detail oriented and independently resourceful in completing tasks. Excellent with working in group settings. Respectful and understanding towards others with different views and ethnic backgrounds.</p>
       </section>
       <section class="bio">
-        <h2>Keith</h2>
-        <div class="photo"><img src="../img/XXX.jpg" alt="Keith"></div>
-        <p>Keith is a software developer based in Tacoma. He has a background in visual arts and performs jazz guitar
-          around the greater Seattle area. He first met Kevin, Sara, and Michael while waiting in line at 7-11 and they
-          all decided to form a band. At band practice one day they discovered software development and the rest is
-          history.
+        <h2 class="bio-name">Keith</h2>
+       
+        <p>Keith Musig is a software developer living in Tacoma, Washington. He has a background in visual arts and performs jazz guitar around the greater Seattle area. In the past week he has become a fan of the art of Magic the Gathering as It was mandatory in order to be in a group with Taylor, Michael, and Czarl. He went out and bought some cards and played for hours when finally discovering that he was playing ‘Uno’ he was playing. The artwork of Magic the Gathering is amazing and it’s been great to work with this team!
         </p>
       </section>
     </section>
-    <footer>
-    
-    </footer>
   </main>
+  <div>
+
+    <footer>
+      <%- include('../pages/partials/footer.ejs') %>
+    </footer>
+  </div>
   <script>
     var cardOne = document.getElementById('card-one');
 cardOne.addEventListener( 'click', function() {
@@ -145,6 +143,7 @@ cardFour.addEventListener( 'click', function() {
   integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
   crossorigin="anonymous"
 ></script>
+
 </body>
 
 </html>
