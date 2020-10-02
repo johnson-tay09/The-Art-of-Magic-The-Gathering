@@ -155,6 +155,11 @@ button:hover {
 	transform: rotateY(180deg);
 	filter: drop-shadow(20px 20px 4px #636363);
 }
+.card__face--back-thirteen {
+	background-image: url('https://lh3.googleusercontent.com/ziv-AoQC27TYZIaJCSmjsK0x0AOKrJg5qt1PITiBfYmtQkmZQ0P8fMUYuHgUKxjvBa-fxF2BGXoWd5-pcVpBbzdsozlaPpBtRM28Q8tSccf1RWwid6nNW5598pz5fv1WGjShGk8Mnw=w250');
+	transform: rotateY(180deg);
+	filter: drop-shadow(20px 20px 4px #636363);
+}
 
 h2,
 h3 {

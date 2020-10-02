@@ -86,6 +86,12 @@
             <div class="card__face card__face--back-twelve"></div>
           </div>
         </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-thirteen">
+            <div class="card__face card__face--front grow"></div>
+            <div class="card__face card__face--back-thirteen"></div>
+          </div>
+        </div>
       </section>
   </main>
   <footer>
@@ -123,6 +129,10 @@ cardEleven.classList.toggle('is-flipped');
 var cardTwelve = document.getElementById('card-twelve');
 cardTwelve.addEventListener( 'click', function() {
 cardTwelve.classList.toggle('is-flipped');
+});
+var cardThirteen = document.getElementById('card-thirteen');
+cardThirteen.addEventListener( 'click', function() {
+cardThirteen.classList.toggle('is-flipped');
 });
 </script>
   <script
