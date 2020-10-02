@@ -1,0 +1,16 @@
+body {
+	background-image: linear-gradient(to bottom right, #7d98a1, #eef1ef);
+	
+}
+
+main {
+	width: 100%;
+	text-align: center;
+}
+
+li {
+	text-decoration: none;
+}
+
+.grow { transition: all .200s ease-in-out; }
+.grow:hover { transform: scale(1.1); }

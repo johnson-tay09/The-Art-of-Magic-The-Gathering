@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About Us</title>
+  <%- include('partials/head.ejs') %>
+  <link href="base.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="fixed-top">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h5 class="text-white h4">Magic Menu</h5>
+          <a href="/"><span class="text-white"><p>Home</p></span></a>
+           <a href="/aboutus"><span class="text-white"><p>About Us</p></span></a>
+          <a href="/favorites"><span class="text-white"><p>Favorite Cards</p></span></a>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1>About Us</h1>
+
+      <section class="gallery-about-us">
+      <div class="scene scene--card">
+      <div class="card" id="card-one">
+        <div class="card__face card__face--front grow"></div>
+        <div class="card__face card__face--back-one"></div>
+      </div>
+    </div>
+
+    <div class="scene scene--card">
+      <div class="card" id="card-two">
+        <div class="card__face card__face--front grow"></div>
+        <div class="card__face card__face--back-two"></div>
+      </div>
+    </div>
+
+    <div class="scene scene--card">
+      <div class="card" id="card-three">
+        <div class="card__face card__face--front grow"></div>
+        <div class="card__face card__face--back-three"></div>
+      </div>
+    </div>
+
+    <div class="scene scene--card">
+      <div class="card" id="card-four">
+        <div class="card__face card__face--front grow"></div>
+        <div class="card__face card__face--back-four"></div>
+      </div>
+    </div>
+  </section>
+
+    <section id="bio-container">
+      <section class="bio">
+        <h2 class="bio-name">Taylor</h2>
+       
+        <p>My name is Taylor Johnson and I have been working as a manufacturing engineer for the past 5 years. I recently made the switch to software development and completed the Intermediate JavaScript and Advanced Python courses at CodeFellows bootcamp.
+          In my time as a manufacturing engineer I was faced with many problems I didn’t know how to solve right away. 
+          One challenge I am really proud of overcoming was when I was asked to take over the CNC milling operations for my product line. I didn't know how to program CNC milling machines but I love a challenge. I taught myself how to program the machines, design work holding  and in just a couple months I had the production schedule fully programmed, tested and approved. After that I wasn’t satisfied so I went back and reprogrammed the old inefficient programs that had been created before me. 
+          I really love taking on new challenges and learning new technologies. When it became clear I was ready for a career change, software development stood out as the ultimate problem solving challenge. I could really see my drive to keep learning fully capitalized here at your company. I am excited for the opportunity and I think developing your product would be a challenge but also a lot of fun.
+        </p>
+      </section>
+      <div id="about-statement">
+      <section class="bio">
+        <h2 class="bio-name">Czarl</h2>
+        
+        <p>Czarl Jalos is a Software Engineer Along with his 8 years of Military service. He led a team and managed in fast paced and high stress environments. He ensured that we completed our job efficiently to support the flight operation and allow them to carry out missions. Since exiting the Navy four months ago, He studied Software Engineering which he’ll complete in December. What he love the most about working in this industry is that he get to be part of starting and developing something innovative and continuing learning. Also, he find the career lifecycle absolutely amazing and would like to share his ability to impact others and develop his developing skill. 
+        </p>
+      </section>
+      <section class="bio">
+        <h2 class="bio-name">Michael</h2>
+        
+        <p>Michael is professional Software Developer experienced with working in fast-paced environments that demand strong professional, technical and organizational skills. Extremely detail oriented and independently resourceful in completing tasks. Excellent with working in group settings. Respectful and understanding towards others with different views and ethnic backgrounds.</p>
+      </section>
+      <section class="bio">
+        <h2 class="bio-name">Keith</h2>
+       
+        <p>Keith Musig is a software developer living in Tacoma, Washington. He has a background in visual arts and performs jazz guitar around the greater Seattle area. In the past week he has become a fan of Magic the Gathering as It was mandatory in order to be in a group with Taylor, Michael, and Czarl. He bought some cards and played for hours when finally discovering that he was playing ‘Uno’. The artwork of Magic the Gathering is amazing and it’s been great to work with this team!</p>
+      </section>
+    </section>
+  </div>
+  </main>
+  <div>
+
+    <footer>
+      <%- include('../pages/partials/footer.ejs') %>
+    </footer>
+  </div>
+  <script>
+    var cardOne = document.getElementById('card-one');
+cardOne.addEventListener( 'click', function() {
+  cardOne.classList.toggle('is-flipped');
+});
+var cardTwo = document.getElementById('card-two');
+cardTwo.addEventListener( 'click', function() {
+  cardTwo.classList.toggle('is-flipped');
+});
+var cardThree = document.getElementById('card-three');
+cardThree.addEventListener( 'click', function() {
+  cardThree.classList.toggle('is-flipped');
+});
+var cardFour = document.getElementById('card-four');
+cardFour.addEventListener( 'click', function() {
+  cardFour.classList.toggle('is-flipped');
+});
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+  crossorigin="anonymous"
+></script>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('pages/partials/head.ejs') %>
+		<title>Magic the Gathering</title>
+	</head>
+	<body>
+		<header>
+			<div class="fixed-top">
+				<div class="collapse" id="navbarToggleExternalContent">
+					<div class="bg-dark p-4">
+						<h5 class="text-white h4">Magic Menu</h5>
+						<a href="/"
+							><span class="text-white"><p>Home</p></span></a
+						>
+						<a href="/aboutus"
+							><span class="text-white"><p>About Us</p></span></a
+						>
+						<a href="/favorites"
+							><span class="text-white"><p>Favorite Cards</p></span></a
+						>
+					</div>
+				</div>
+				<nav class="navbar navbar-dark bg-dark">
+					<button
+						class="navbar-toggler grow"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarToggleExternalContent"
+						aria-controls="navbarToggleExternalContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<h1>The Art of Magic the Gathering</h1>
+
+			<form action=""></form>
+			<div id="form">
+				<h4>Search by Card Name or Artist</h4>
+				<form action="/search" method="post">
+					<div id="search">
+						<input
+							id="search"
+							type="text"
+							name="search"
+							placeholder="Enter a name or artist"
+							required
+						/>
+					</div>
+					<fieldset>
+						<div id="title">
+							<label for="name">
+								<span>Card Name</span>
+								<input
+									class="radio"
+									type="radio"
+									name="search"
+									value="name"
+									required
+								/>
+							</label>
+						</div>
+					</fieldset>
+					<fieldset>
+						<div id="artist">
+							<label for="artist">
+								<span>Artist</span>
+
+								<input
+									id="input1"
+									class="radio"
+									type="radio"
+									name="search"
+									value="artist"
+									required
+								/>
+							</label>
+						</div>
+					</fieldset>
+					<button type="submit">Search the MTG API</button>
+				</form>
+			</div>
+			<img
+				class="homeimg grow"
+				src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=195297&amp;type=card"
+				alt=""
+			/>
+			<img
+				class="homeimg grow"
+				src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=209&amp;type=card"
+				alt=""
+			/>
+			<img
+				class="homeimg grow"
+				src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=298&amp;type=card"
+				alt=""
+			/>
+			<img
+				class="homeimg grow"
+				src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=489948&amp;type=card"
+				alt=""
+			/>
+			<img
+				class="homeimg grow"
+				src="http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=437&amp;type=card"
+				alt=""
+			/>
+		</main>
+		<footer id="footer"><%- include('pages/partials/footer.ejs') %></footer>
+	</body>
+	<script
+		src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"
+	></script>
+</html>

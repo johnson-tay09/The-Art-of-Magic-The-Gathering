@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('partials/head.ejs') %>
+		<title>Card Favorites</title>
+		<link href="base.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>
+			<div class="fixed-top">
+				<div class="collapse" id="navbarToggleExternalContent">
+					<div class="bg-dark p-4">
+						<h5 class="text-white h4">Magic Menu</h5>
+						<a href="/"><span class="text-white"><p>Home</p></span></a>
+						<a href="/aboutus"><span class="text-white"><p>About Us</p></span></a>
+					 <a href="/favorites"><span class="text-white"><p>Favorite Cards</p></span></a>
+					</div>
+				</div>
+				<nav class="navbar navbar-dark bg-dark">
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-toggle="collapse"
+						data-target="#navbarToggleExternalContent"
+						aria-controls="navbarToggleExternalContent"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</nav>
+			</div>
+		</header>
+		<main>
+			
+			<h1>Favorite Cards</h1>
+			<section class="galleryFav">
+			
+				<% savedCardArry.forEach(card => { %>
+					<div class="card">
+						<h2><%= card.name %></h2>
+					<img class="grow" src="<%= card.image_url %>" alt="" />
+					<h3><%= card.artist %></h3>
+					<a class="store" href="<%=card.artist_store_url %>">Visit Artist Store</a>
+					<form action="/delete/<%= card.id %>?_method=DELETE" method="POST">
+						<button type="submit">Delete Card</button>
+					</form>
+					<form action="/searchArtist" method="post">
+						<input
+							hidden
+							class="details"
+							type="text"
+							name="artist"
+							value="<%= card.artist %>"
+						/>
+						<button type="submit">See more from <%= card.artist %></button>
+					</form>
+					
+
+					<form id="updateForm" action="/update/<%= card.id %>?_method=PUT" method="POST">
+						<div id="search">
+							<input id="search" type="text" name="artist_store_url" placeholder="Enter artist store url" required />
+							<button type="submit">Update store</button>
+						</div>
+					</form>
+				</div>	
+					<%})%>
+				</section>
+					
+		</main>
+		<footer>
+			<%- include('../pages/partials/footer.ejs') %>
+		</footer>
+		<script
+		src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"
+	></script>
+	</body>
+</html>

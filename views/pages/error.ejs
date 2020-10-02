@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Error</title>
+  <%- include('partials/head.ejs') %>
+  <link href="base.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="fixed-top">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <h5 class="text-white h4">Magic Menu</h5>
+          <a href="/"><span class="text-white"><p>Home</p></span></a>
+           <a href="/aboutus"><span class="text-white"><p>About Us</p></span></a>
+          <a href="/favorites"><span class="text-white"><p>Favorite Cards</p></span></a>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarToggleExternalContent"
+          aria-controls="navbarToggleExternalContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <main>
+      <h1>WELCOME TO ERROR LAND</h1>
+      <h2>Sorry, this card does not exist</h2>
+      <h2>and neither do any of these.</h2>
+      <section class="gallery">
+        <div class="scene scene--card">
+          <div class="card" id="card-five">
+            <div class="card__face card__face--front grow"></div>
+            <div class="card__face card__face--back-five"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-six">
+            <div class="card__face card__face--front grow"></div>
+            <div class="card__face card__face--back-six"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-seven">
+            <div class="card__face card__face--front grow"></div>
+            <div class="card__face card__face--back-seven"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-eight">
+            <div class="card__face card__face--front grow"></div>
+            <div class="card__face card__face--back-eight"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-nine">
+            <div class="card__face card__face--front grow"></div>
+            <div class="card__face card__face--back-nine"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-ten">
+            <div class="card__face card__face--front grow"></div>
+            <div class="card__face card__face--back-ten"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-eleven">
+            <div class="card__face card__face--front grow" ></div>
+            <div class="card__face card__face--back-eleven"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-twelve">
+            <div class="card__face card__face--front grow"></div>
+            <div class="card__face card__face--back-twelve"></div>
+          </div>
+        </div>
+        <div class="scene scene--card">
+          <div class="card" id="card-thirteen">
+            <div class="card__face card__face--front grow"></div>
+            <div class="card__face card__face--back-thirteen"></div>
+          </div>
+        </div>
+      </section>
+  </main>
+  <footer>
+    <%- include('../pages/partials/footer.ejs') %>
+</footer>
+<script>
+  var cardFive = document.getElementById('card-five');
+cardFive.addEventListener( 'click', function() {
+cardFive.classList.toggle('is-flipped');
+});
+var cardSix = document.getElementById('card-six');
+cardSix.addEventListener( 'click', function() {
+cardSix.classList.toggle('is-flipped');
+});
+var cardSeven = document.getElementById('card-seven');
+cardSeven.addEventListener( 'click', function() {
+cardSeven.classList.toggle('is-flipped');
+});
+var cardEight = document.getElementById('card-eight');
+cardEight.addEventListener( 'click', function() {
+cardEight.classList.toggle('is-flipped');
+});
+var cardNine = document.getElementById('card-nine');
+cardNine.addEventListener( 'click', function() {
+cardNine.classList.toggle('is-flipped');
+});
+var cardTen = document.getElementById('card-ten');
+cardTen.addEventListener( 'click', function() {
+cardTen.classList.toggle('is-flipped');
+});
+var cardEleven = document.getElementById('card-eleven');
+cardEleven.addEventListener( 'click', function() {
+cardEleven.classList.toggle('is-flipped');
+});
+var cardTwelve = document.getElementById('card-twelve');
+cardTwelve.addEventListener( 'click', function() {
+cardTwelve.classList.toggle('is-flipped');
+});
+var cardThirteen = document.getElementById('card-thirteen');
+cardThirteen.addEventListener( 'click', function() {
+cardThirteen.classList.toggle('is-flipped');
+});
+</script>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+  crossorigin="anonymous"
+></script>
+</body>
+
+</html>
