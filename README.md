@@ -100,3 +100,7 @@ Added save and delete from favorites functions to server.js
 ## Version 1.6.0
 
 Added advanced styles. Drop shadows. Dynamic buttons.
+
+## Version 2.0.0
+
+Final CSS touches. Pushed changes to Master Branch.
