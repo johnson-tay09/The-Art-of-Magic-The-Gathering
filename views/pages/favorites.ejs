@@ -39,7 +39,7 @@
 				<% savedCardArry.forEach(card => { %>
 					<div class="card">
 						<h2><%= card.name %></h2>
-					<img src="<%= card.image_url %>" alt="" />
+					<img class="grow" src="<%= card.image_url %>" alt="" />
 					<h3><%= card.artist %></h3>
 					<a class="store" href="<%=card.artist_store_url %>">Visit Artist Store</a>
 					<form action="/delete/<%= card.id %>?_method=DELETE" method="POST">

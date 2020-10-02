@@ -36,7 +36,7 @@
                 <% finalCardArray.forEach(card => { %>
                 <div class="card">
                 <h2><%= card.name %></h2>
-                <img src="<%= card.image_url %>" />
+                <img class="grow" src="<%= card.image_url %>" />
                 <h3><%= card.artist %></h3>
 
                 <form action="/add" method="post">
