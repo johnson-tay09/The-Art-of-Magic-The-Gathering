@@ -10,3 +10,6 @@ main {
 li {
 	text-decoration: none;
 }
+
+.grow { transition: all .200s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
